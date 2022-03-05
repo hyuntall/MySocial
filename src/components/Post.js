@@ -4,7 +4,7 @@ import { doc, deleteDoc, updateDoc } from "firebase/firestore"
 import { deleteObject, ref } from "firebase/storage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons"
-import 'post.css'
+import 'post.css' 
 const Post = ({ postObj, isOwner }) => {
     const [editing, setEditing] = useState(false);
     const [newPost, setNwePost] = useState(postObj.text);
