@@ -8,8 +8,10 @@ import {
   faGoogle,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import 'auth.css'
 
 const Auth = () => {
+    // google, github으로 로그인
     const onSocialClick = async (event) => {
         const {
             target: {name}
@@ -23,22 +25,16 @@ const Auth = () => {
         const data = await signInWithPopup(authService, provider);
     }
     return (
-        <div className="authContainer">
-      <FontAwesomeIcon
-        icon={faTwitter}
-        color={"#04AAFF"}
-        size="3x"
-        style={{ marginBottom: 30 }}
-      />
-            <AuthForm />
-            <div className="authBtns">
-        <button onClick={onSocialClick} name="google" className="authBtn">
+      <div className="authContainer">
+        <FontAwesomeIcon className="authMainIcon" icon={faTwitter} size="3x"/>
+        <AuthForm />
+        <div className="authBtns">
+          <button onClick={onSocialClick} name="google" className="authBtn">
           Continue with Google <FontAwesomeIcon icon={faGoogle} /></button>
           <button onClick={onSocialClick} name="github" className="authBtn">
           Continue with Github <FontAwesomeIcon icon={faGithub} /></button>
-
-            </div>
         </div>
+      </div>
     )
 }
 export default Auth

@@ -1,31 +1,31 @@
 import { dbService } from "myFirebase";
 import { collection, query, onSnapshot, orderBy } from "firebase/firestore";
 import { React, useState, useEffect } from "react";
-import Nweet from "components/Nweet";
-import NweetFactory from "components/NweetFactory";
-
+import Post from "components/Post";
+import PostFactory from "components/PostFactory";
+import 'home.css'
 const Home = ({ userObj }) => {
-    const [nweets, setNweets] = useState([]);
+    const [posts, setPosts] = useState([]);
     useEffect(() => {
-        // nweets 에서 작성시간 순으로 정렬하여 호출하는 쿼리
+        // posts 에서 작성시간 순으로 정렬하여 호출하는 쿼리
         const q = query(
-            collection(dbService, "nweets"),
+            collection(dbService, "posts"),
             orderBy("createdAt", "desc")
         );
         onSnapshot(q, (snapshot) => {
-            const nweetArr = snapshot.docs.map((doc) => ({
+            const postArr = snapshot.docs.map((doc) => ({
                 id: doc.id,
                 ...doc.data(),
             }));
-        setNweets(nweetArr);
+        setPosts(postArr);
         });
     }, [])
         return (
         <div className="container">
-            <NweetFactory userObj={userObj}/>
-            <div style={{ marginTop: 30 }}>
-                {nweets.map(nweet => (
-                 <Nweet key={nweet.id} nweetObj={nweet} isOwner={nweet.creatorId === userObj.uid}/>
+            <PostFactory userObj={userObj}/>
+            <div>
+                {posts.map(post => (
+                 <Post key={post.id} postObj={post} isOwner={post.creatorId === userObj.uid}/>
                 ))}
             </div>
         </div>

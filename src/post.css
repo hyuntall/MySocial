@@ -1,0 +1,138 @@
+.factoryForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .factoryInput__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .factoryInput__input {
+    flex-grow: 1;
+    height: 40px;
+    padding: 0px 20px;
+    color: white;
+    border: 1px solid #04aaff;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+  
+  .factoryInput__arrow {
+    position: absolute;
+    right: 0;
+    background-color: #04aaff;
+    height: 40px;
+    width: 40px;
+    padding: 10px 0px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .factoryInput__label {
+    color: #04aaff;
+    cursor: pointer;
+  }
+  
+  .factoryInput__label span {
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  
+  .factoryForm__attachment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .factoryForm__attachment img {
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+  }
+  
+  .factoryForm__clear {
+    color: #04aaff;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .factoryForm__clear span {
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  
+  /* post */
+  
+  .postEdit .formBtn {
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .post {
+    margin-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .post h4 {
+    font-size: 14px;
+  }
+
+  .posterName {
+    margin-bottom: 10px;
+  }
+  
+  .post .userProfileImg {
+    left: -25px;
+    top: -40px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+  }
+
+  .post .postImg {
+    align-self: center;
+    width: 300px;
+    margin-top: 10px;
+  }
+  
+  .post__actions {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  
+  .post__actions span {
+    cursor: pointer;
+  }
+  
+  .post__actions span:first-child {
+    margin-right: 10px;
+  }
+
+  .post-input::placeholder {
+    color: white;
+    opacity: 0.9;
+  }

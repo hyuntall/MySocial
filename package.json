@@ -23,7 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "predelpoy": "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -44,5 +44,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://hyuntall.github.io/MySocial"
+  "homepage": "https://hyuntall.github.io/MySocial/"
 }
