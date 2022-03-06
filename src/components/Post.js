@@ -52,8 +52,7 @@ const Post = ({ postObj, isOwner }) => {
                 ) : ( // 기본 상태
                 <>  {postObj.creatorName ? (<h4 className="posterName">{postObj.creatorName}</h4>) : (<h4 className="posterName">이름 설정 안한 멍청이</h4>)}
                     <h4>{postObj.text}</h4>
-                    {postObj.userProfileImg &&
-                    (<img className="userProfileImg" src={postObj.userProfileImg ? (postObj.userProfileImg):(require("img/user.png"))}/>)}
+                    <img className="userProfileImg" src={postObj.userProfileImg ? (postObj.userProfileImg) : (require("img/user.png"))}/>
                     {postObj.attachmentURL && // 게시글에 이미지가 있을 경우 이미지 표시
                     (<img className="postImg" src={postObj.attachmentURL}/>)}
                     {isOwner && ( // 게시글 작성자 본인인 경우 편집,삭제버튼 표시

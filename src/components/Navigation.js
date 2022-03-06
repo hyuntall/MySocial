@@ -8,11 +8,11 @@ const Navigation = ({ userObj }) => (
 <nav>
     <ul className="navigator">
         <li><Link to="/" className="home">
-            <FontAwesomeIcon className="icon" icon={faTwitter} color={"#04AAFF"} size="2x"/>
+            <img className="icon" src={require("img/b612.png")} />
             Home
             </Link></li>
         <li><Link to="/profile" className="profile">
-                <FontAwesomeIcon className="icon" icon={faUser} color={"#04AAFF"} size="2x"/>
+        <img className="icon" src={require("img/profile.png")} />
             {userObj.displayName ? `${userObj.displayName}의 Profile`:"Profile"}</Link></li>
     </ul>
 </nav>)
