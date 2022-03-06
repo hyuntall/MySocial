@@ -39,7 +39,7 @@ function App() {
     refreshUser={refreshUser}
     isLoggedIn={isLoggedIn} 
     userObj={userObj}/> : "Initializing..."}
-    <footer>&copy; Nwitter {new Date().getFullYear()}</footer>
+    <footer>&copy; My Little B612 {new Date().getFullYear()}</footer>
   </>
   )
 }

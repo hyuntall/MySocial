@@ -38,7 +38,7 @@ const PostFactory = ({ userObj }) => {
                     createdAt: Date.now(),
                     creatorId: userObj.uid,
                     creatorName: userObj.displayName,
-                    userProfileImg: userObj.photoURL,
+                    userProfile: userObj.photoURL,
                     attachmentURL
             });
             setPost("");
@@ -74,7 +74,7 @@ const PostFactory = ({ userObj }) => {
                 value={post} onChange={onChange} 
                 type="text" placeholder="What's on your mind?" maxLength={120}/>
                 <input className="factoryInput__arrow"
-                type="submit" value="posting" />
+                type="submit" value="post" />
             </div>
 
             <label htmlFor="attach-file" className="factoryInput_label">

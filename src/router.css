@@ -1,7 +1,7 @@
 .router {
-    max-width: 890px;
+    max-width: 90%;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 5%;
     margin-top: 80;
     display: flex;
     justify-content: center;

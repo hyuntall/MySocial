@@ -1,6 +1,5 @@
 .navigator {
     justify-content: center;
-    margin-top: 50px;
     display: flex;
 }
 .navigator .home {
